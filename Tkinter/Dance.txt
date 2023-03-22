@@ -1,0 +1,25 @@
+First Name: Arshad
+Last Name: Khan
+Location: Mumbai
+
+First Name: Farha
+Last Name: Khan
+Location: jhopadpati
+
+First Name: Ruksana
+Last Name: Khan
+Location: Jhopadpati
+
+First Name: Abdulla
+Last Name: Khan
+Location: sapno ka mahal
+
+First Name: nilofar
+Last Name: khan
+Location: village
+
+
+First Name: faizan
+Last Name: bhai
+Location: jhatkopar
+

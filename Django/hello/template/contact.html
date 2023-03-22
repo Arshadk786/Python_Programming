@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block active %}
+active
+{% endblock active %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block body %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show " role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+
+
+    <div class="container-fluid px-0">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://source.unsplash.com/random/1200x400/?phone" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-center my-4">Contact Us</h1>
+
+    <div class="container">
+        <form method="post" action="/contact/">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+                <label for="number" class="form-label">Phone Number</label>
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="1234567890"
+                    maxlength="10">
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="3"
+                    placeholder="Write something you wanna tell us"></textarea>
+            </div>
+
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    {% endblock body %}

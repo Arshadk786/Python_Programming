@@ -1,0 +1,5 @@
+f = open("File_IO_basics", "r")
+print(f.tell())
+f.seek(54)
+print(f.readline()) 
+f.close()
